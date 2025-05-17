@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'mainFont';
+    src: url('./fonts/zh-cn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
