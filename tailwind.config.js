@@ -11,16 +11,13 @@ export default {
   ],
   theme: {
     extend: {
-      keyframes: {
-        twinkle: {
-          '0%, 100%': { opacity: '0.2' },
-          '50%': { opacity: '1' },
-        },
+      screens: {
+        lgxl: '1450px',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
-        twinkle: 'twinkle 2s infinite ease-in-out',
-
+        'spin-slower': 'spin 30s linear infinite',
+        'spin-slower-reverse': 'spin 30s linear infinite reverse', 
       },
       fontFamily: {
         mainFont: ['mainFont', 'sans-serif'],

@@ -1,13 +1,13 @@
 import Links from "@/components/links";
-import Start from "@/components/start";
+import Cover from "@/components/cover";
 import DefaultLayout from "@/layouts/default";
+import Projects from "@/components/projects";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex font-mainFont flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <Start />
-      </section>
+      <Cover />
+      <Projects />
       <Links />
     </DefaultLayout>
   );
