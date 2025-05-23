@@ -10,7 +10,7 @@ export default function Star() {
 	const { setShowStar } = useStar();
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		if (latest > 0.3) {
+		if (latest > 0.4) {
 			setActive(true);
 			setTimeout(() => {
 				setShow(false);
@@ -27,7 +27,7 @@ export default function Star() {
 	return (
 		<motion.div
 			animate={{
-				y: active ? "145vh" : "10.3vh",
+				y: active ? window.innerWidth > 1024 ? "145vh" : "142vh" : window.innerWidth > 1024 ? "10.3vh" : "9.5vh",
 			}}
 			transition={{
 				type: "spring",
@@ -36,7 +36,8 @@ export default function Star() {
 			}}
 		>
 			<svg
-				className={`${!active && "animate-spin-slow"} ${!show && "opacity-0"} "opacity-100" transition-all h-[10vw] duration-500 size-[20px] fill-current dark:text-white absolute lg:left-[49%] left-[48%] lg:mt-4 mt-2.5`}
+				className={`${!active ? "animate-spin-slow" : "dark:text-white text-yellow-400"} ${!show ? "opacity-0" : "opacity-100"} transition-all h-[10vw] duration-500 size-[20px] fill-current dark:text-white absolute 
+				lg:left-[49%] left-[47%] lgxl:mt-4 xl:mt-[9.5vh] lg:mt-[12.6vh] md:mt-2.5 mt-[11vh]`}
 				viewBox={active ? "0 -100 100 200" : "0 0 100 100"}
 				xmlns="http://www.w3.org/2000/svg"
 			>
@@ -48,7 +49,7 @@ export default function Star() {
 				{active && (
 					<motion.path
 						filter={"blur(5px)"}
-						d="M40 0 L70 0 L50 -500 Z"
+						d={"M40 0 L70 0 L50 -500 Z"}
 						fill="currentColor"
 						initial={{ opacity: 0, scaleY: 0 }}
 						animate={{ opacity: 1, scaleY: 1 }}

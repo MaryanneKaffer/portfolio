@@ -55,8 +55,8 @@ export default function StarHover({ type }: { type: string }) {
             )}
             {type === "card" && (
                 <>
-                    {star("animate-spin-slower-reverse", "bottom-[45%] -right-[5%] lg:w-[3vw] w-[20px]")}
-                    {star("animate-spin-slower", "top-[40%] -left-[5%] lg:w-[30px] w-[15px]")}
+                    {star("animate-spin-slower-reverse", "bottom-[45%] -right-[5%] lg:w-[1.5vw] w-[20px]")}
+                    {star("animate-spin-slower", "top-[40%] -left-[5%] lg:w-[1.2vw] w-[15px]")}
                 </>
             )}
         </>
