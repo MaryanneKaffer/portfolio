@@ -5,7 +5,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import type SwiperType from 'swiper';
 import { FaChevronDown } from "react-icons/fa";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useStar } from "./starProvider";
 import StarHover from "./starHover";
 
@@ -13,11 +13,8 @@ import StarHover from "./starHover";
 export default function Projects() {
     const swiperRef = useRef<SwiperType | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const { scrollYProgress } = useScroll();
     const [hover, setHover] = useState("")
-    const opacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
     const { showStar } = useStar();
-
 
     const toggleAutoplay = () => {
         if (!swiperRef.current) return;
