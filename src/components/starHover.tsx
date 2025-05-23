@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function StarHover() {
+export default function StarHover({ type }: { type: string }) {
     const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
@@ -27,8 +27,8 @@ export default function StarHover() {
             >
                 <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor={isDark ? "#fcc7ff" : "#ffe76e" } />
-                            <stop offset="100%" stopColor={isDark ? "#cceeff" : "#ffe76e" }/>
+                        <stop offset="0%" stopColor={isDark ? "#fcc7ff" : "#ffe76e"} />
+                        <stop offset="100%" stopColor={isDark ? "#cceeff" : "#ffe76e"} />
                     </linearGradient>
                 </defs>
                 <path
@@ -47,8 +47,18 @@ export default function StarHover() {
     }
     return (
         <>
-            {star("animate-spin-slower-reverse", "bottom-[24%] -left-[11%] w-[1.3vw] ")}
-            {star("animate-spin-slower", "top-[24%] -right-[11%] w-[1vw] ")}
+            {type === "skill" && (
+                <>
+                    {star("animate-spin-slower-reverse", "bottom-[24%] -left-[11%] lg:w-[25px] w-[20px]")}
+                    {star("animate-spin-slower", "top-[24%] -right-[11%] lg:w-[20px] w-[15px]")}
+                </>
+            )}
+            {type === "card" && (
+                <>
+                    {star("animate-spin-slower-reverse", "bottom-[45%] -right-[5%] lg:w-[3vw] w-[20px]")}
+                    {star("animate-spin-slower", "top-[40%] -left-[5%] lg:w-[30px] w-[15px]")}
+                </>
+            )}
         </>
     );
 }

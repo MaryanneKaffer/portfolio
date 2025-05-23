@@ -1,3 +1,4 @@
+import { StarProvider } from "@/components/starProvider";
 import StarField from "@/layouts/starfield";
 
 export default function DefaultLayout({
@@ -6,11 +7,13 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex flex-col h-screen cursor-default">
-      <StarField />
-      <main className="container mx-auto max-w-7xl font-mainFont sm:px-20 px-10 flex-grow z-10">
-        {children}
-      </main>
-    </div>
+    <StarProvider>
+      <div className="relative flex flex-col h-screen cursor-default">
+        <StarField />
+        <main className="container mx-auto max-w-7xl font-mainFont sm:px-20 px-10 flex-grow z-10">
+          {children}
+        </main>
+      </div>
+    </StarProvider>
   );
 }
