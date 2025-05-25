@@ -39,4 +39,9 @@ export const skills = [
         icon: "/assets/skillIcons/restApiIcon.svg",
         proficiency: "Basic",
     },
+    {
+        name: "English",
+        icon: "/assets/skillIcons/enIcon.svg",
+        proficiency: "C2 - EF SET",
+    },
 ]

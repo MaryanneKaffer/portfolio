@@ -13,6 +13,7 @@ export default {
     extend: {
       screens: {
         lgxl: '1450px',
+        g: '380px',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
