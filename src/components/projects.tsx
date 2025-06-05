@@ -37,7 +37,9 @@ export default function Projects() {
                             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }} >
                             <div onMouseEnter={() => setHover("preview")} onMouseLeave={() => setHover("")}
                                 className="dark:bg-[#111111] bg-white dark:border-none border-1 border-black xl:p-8 p-5 rounded-xl sm:h-[53%] sm:m-0 m-4 h-[40%] flex flex-col sm:w-[45vw] transition-all relative sm:ml-8 hover:scale-105 " >
-                                <img src={project.image} alt={project.name} className="object-cover rounded-xl h-[80%] w-full" />
+                                <a href={project.link} target="_blank">
+                                    <img src={project.image} alt={project.name} className="object-cover rounded-xl h-fit w-full" />
+                                </a>
                                 <a href={project.link} target="_blank" className="xl:text-xl self-center mt-auto bg-gradient-to-r dark:from-cyan-200 dark:via-white dark:to-pink-200 from-pink-300 to-yellow-300 bg-clip-text text-transparent">
                                     Visit
                                 </a>

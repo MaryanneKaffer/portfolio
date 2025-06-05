@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Cover() {
     const [hover, setHover] = useState<number | null>(null);
     return (
-        <section className="w-full sn:h-[100dvh] justify-items-center lg:py-32 py-12">
+        <section className="w-full sm:h-[100dvh] justify-items-center lg:py-32 py-12">
             <div className="flex flex-col items-center">
                 <h1 className="lg:w-[550px] cursor-default mt-2 lg:text-6xl text-5xl text-center bg-gradient-to-r dark:from-purple-500 dark:to-cyan-500 from-pink-500 to-yellow-500 bg-clip-text text-transparent 
             lg:dark:brightness-100 lg:brightness-125 brightness-150 transition-all duration-500 ease-in-out dark:hover:brightness-125 hover:brightness-150 dark:hover:drop-shadow-[0_0_10px_rgba(0,0,255,0.7)] 
@@ -17,7 +17,7 @@ export default function Cover() {
                     <h2>Engineer</h2>
                 </span>
             </div>
-            <div className="text-center lgxl:mt-14 mt-10 lg:text-xl text-sm">
+            <div className="text-center lgxl:mb-14 my-8 lg:text-xl text-sm">
                 <p>I have been involved with programming since childhood and am always looking to learn and grow.
                     In recent months, I have been focusing my studies on front-end development, using technologies such as React and JavaScript to build modern and high-performance web applications.
                 </p>

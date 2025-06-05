@@ -1,5 +1,12 @@
 export const projects = [
     {
+        name: "Game Explorer",
+        description: "A project designed to study how to fetch and consume data from an external API. The app allows users to explore a variety of games, displaying information. This project focuses on practicing API integration.",
+        image: "/assets/gameExplorer.png",
+        link: "https://game-explorer-app-six.vercel.app",
+        github: "https://github.com/MaryanneKaffer/game-explorer-app",
+    },
+    {
         name: "Cinthia Correia",
         description: "A website for a psychologist focused on mental health and well-being. It features a responsive design for optimal appearance on any device, complemented by subtle animations to enhance the user experience.",
         image: "/assets/cinthiacorreia.png",

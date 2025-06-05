@@ -27,7 +27,7 @@ export default function Star() {
 	return (
 		<motion.div
 			animate={{
-				y: active ? window.innerWidth > 1024 ? "126vh" : "142vh" : window.innerWidth > 1024 ? "10.3vh" : "9.5vh",
+				y: active ? window.innerWidth > 1024 ? "144vh" : "142vh" : window.innerWidth > 1024 ? "10.3vh" : "9.5vh",
 			}}
 			transition={{
 				type: "spring",
