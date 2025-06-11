@@ -16,7 +16,7 @@ export default function CreditFooter() {
     }, []);
 
     return (
-        <div className="min-h-[50px] relative flex place-items-center justify-center gap-2 hover:brightness-90">
+        <div className="min-h-[50px] sm:mt-0 mt-10 relative flex place-items-center justify-center gap-2 hover:brightness-90">
             <h1 className="text-center text-md">Powered by <a href="https://github.com/MaryanneKaffer" target="_blank" className="text-purple-500">Maryanne Käffer</a></h1>
             <svg
                 className={`transition-all duration-500 animate-spin-slow size-4 ${isDark ? "text-white" : "text-black"}`}

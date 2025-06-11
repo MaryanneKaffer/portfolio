@@ -48,7 +48,7 @@ export default function Projects() {
                             <div onMouseEnter={() => setHover("description")} onMouseLeave={() => setHover("")}
                                 className="dark:bg-[#111111] bg-white dark:border-none mt-14 sm:mt-0 border-1 border-black flex flex-col xl:p-8 p-5 rounded-xl sm:h-[53%] h-[45%] sm:w-[45vw] sm:m-0 m-4  relative sm:mr-8 hover:scale-105 transition-all" >
                                 <h2 className="text-center lgxl:text-3xl xl:text-2xl lg:text-xl md:text-md text-[20px] xl:mb-3 lg:mb-2 mb-1">{project.name}</h2>
-                                <p className="text-center lgxl:text-xl xl:text-lg lg:text-sm md:text-sm text-[1.9vh]">{project.description}</p>
+                                <p className="text-center lgxl:text-xl xl:text-lg lg:text-sm md:text-sm text-[1.7vh]">{project.description}</p>
                                 <a href={project.github} target="_blank" className="xl:text-xl mt-auto self-center bg-gradient-to-r dark:from-cyan-200 dark:via-white dark:to-pink-200 from-pink-300 to-yellow-300 bg-clip-text text-transparent">
                                     GitHub
                                 </a>
@@ -60,7 +60,7 @@ export default function Projects() {
             </Swiper>
             {showStar &&
                 <motion.svg initial={{ opacity: 0 }} animate={{ opacity: isPlaying ? 0 : 1 }} transition={{ duration: 0.1 }}
-                    className={`animate-spin-slow absolute ml-2 sm:top-[52%] top-[50.8%] z-10 transition-all duration-500 size-[30px] fill-current dark:text-white text-yellow-400 hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.7)]`}
+                    className={`animate-spin-slow absolute sm:ml-2 ml-4 sm:top-[52%] top-[52%] z-10 transition-all duration-500 sm:size-[30px] size-[20px] fill-current dark:text-white text-yellow-400 hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.7)]`}
                     viewBox={"0 0 100 100"} xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 0 C60 25, 75 40, 100 50 C75 60, 60 75, 50 100 C40 75, 25 60, 0 50 C25 40, 40 25, 50 0 Z" />
                 </motion.svg>
