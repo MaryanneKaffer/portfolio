@@ -10,7 +10,7 @@ export default function Star() {
 	const { setShowStar } = useStar();
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		if (latest > 0.7) {
+		if (latest > 0.8) {
 			setActive(true);
 			setTimeout(() => {
 				setShow(false);
@@ -27,7 +27,7 @@ export default function Star() {
 	return (
 		<motion.div
 			animate={{
-				y: active ? window.innerWidth > 1024 ? "195vh" : "170vh" : window.innerWidth > 1024 ? "12vh" : "9vh",
+				y: active ? window.innerWidth > 1024 ? "275vh" : "285vh" : window.innerWidth > 1024 ? "21vh" : "16vh",
 			}}
 			transition={{
 				type: "spring",

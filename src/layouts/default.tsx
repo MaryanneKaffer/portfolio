@@ -1,7 +1,6 @@
 import CreditFooter from "@/components/creditFooter";
 import { StarProvider } from "@/components/starProvider";
 import StarField from "@/layouts/starfield";
-import Links from "@/components/links";
 
 export default function DefaultLayout({
   children,
@@ -17,7 +16,6 @@ export default function DefaultLayout({
         </main>
         <CreditFooter />
       </div>
-      <Links />
     </StarProvider>
   );
 }

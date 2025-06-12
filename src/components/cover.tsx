@@ -1,13 +1,13 @@
+import Links from "./links";
 import StarHover from "./starHover";
-import { skills } from "@/config/skills";
 import { useState } from "react";
 
 export default function Cover() {
     const [hover, setHover] = useState<number | null>(null);
     return (
-        <section className="w-full sm:h-[100dvh] justify-items-center lg:pt-36 pt-12">
+        <section className="w-full sm:h-[100dvh] justify-items-center lg:py-60 py-20">
             <div className="flex flex-col items-center">
-                <h1 className="lg:w-[550px] cursor-default mt-2 lg:text-6xl text-5xl text-center bg-gradient-to-r dark:from-purple-500 dark:to-cyan-500 from-pink-500 to-yellow-500 bg-clip-text text-transparent 
+                <h1 className="lg:w-[550px] cursor-default lg:text-6xl text-5xl text-center bg-gradient-to-r dark:from-purple-500 dark:to-cyan-500 from-pink-500 to-yellow-500 bg-clip-text text-transparent 
             lg:dark:brightness-100 lg:brightness-125 brightness-150 transition-all duration-500 ease-in-out dark:hover:brightness-125 hover:brightness-150 dark:hover:drop-shadow-[0_0_10px_rgba(0,0,255,0.7)] 
             lg:dark:drop-shadow-[0_0_5px_rgba(0,0,255,0.5)] dark:drop-shadow-[0_0_10px_rgba(0,0,255,0.7)] dark:brightness-125">
                     Maryanne Käffer
@@ -17,33 +17,22 @@ export default function Cover() {
                     <h2>Engineer</h2>
                 </span>
             </div>
-            <div className="text-center lgxl:mb-14 my-8 lg:text-xl text-sm">
+            <div className="text-center lgxl:mt-10 my-8 lg:text-xl text-sm md:w-[75%]">
                 <p>I have been involved with programming since childhood and am always looking to learn and grow.
                     In recent months, I have been focusing my studies on front-end development, using technologies such as React and JavaScript to build modern and high-performance web applications.
                 </p>
             </div>
-            <div className="lg:mt-5 mt-5 dark:hover:brightness-125 hover:scale-105 transition-all">
+            <div className="lg:my-10 my-5 dark:hover:brightness-125 hover:scale-105 transition-all">
                 <a href="/assets/curriculum.pdf" target="_blank" onMouseEnter={() => setHover(10)} onMouseLeave={() => setHover(null)}
-                    className=" active:scale-100 lg:text-lg text-sm bg-gradient-to-r dark:from-purple-700 dark:to-blue-500 py-3 px-5 rounded-xl from-pink-300 to-yellow-200 ">
-                    {hover === 10 && <StarHover type="skill" />} Curriculum
+                    className="relative inline-block lg:text-lg text-sm rounded-xl p-[2px] transition-transform active:scale-100 group"
+                >
+                    <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-300 to-yellow-200 dark:from-purple-700 dark:to-blue-500 group-hover:drop-shadow-[0_0px_8px_rgba(255,192,203,0.5)]"></span>
+                    <span className="relative z-10 flex items-center justify-center transition-all duration-500 hover:bg-transparent hover:dark:bg-transparent dark:bg-black bg-white text-black dark:text-white rounded-xl px-5 py-3">
+                        {hover === 10 && <StarHover type="skill" />} Curriculum
+                    </span>
                 </a>
             </div>
-            <h2 className="text-center lg:text-4xl lg:mt-32 md:mt-20 mt-10">Skills</h2>
-            <div className="flex flex-wrap gap-3 sm:mx-16 justify-center overflow-visible mt-4">
-                {skills.map((skill, index) => (
-                    <span key={index} >
-                        <div onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(null)} className="w-auto flex gap-2 mx-[0.1vh] hover:mx-0 items-center lg:text-lg md:text-md text-sm items-center bg-white 
-                        px-4 dark:bg-[#111111] bg-[#d1gfff] relative rounded-lg p-2 hover:scale-110 transition-all duration-500 group transform origin-center justify-items-center sm:min-w-[130px] dark:border-none border-1 border-black">
-                            <img src={skill.icon} alt={skill.name} className="lg:w-8 lg:h-8 md:h-6 md:w-6 w-4 h-4" />
-                            <p className="text-center group-hover:hidden">{skill.name}</p>
-                            <p className="hidden group-hover:flex bg-gradient-to-r dark:from-cyan-200 dark:via-white dark:to-pink-200 from-pink-300 to-yellow-300 bg-clip-text text-transparent" >
-                                {skill.proficiency}
-                            </p>
-                            {hover === index && <StarHover type="skill" />}
-                        </div>
-                    </span>
-                ))}
-            </div>
+            <Links />
         </section>
     )
 }  
