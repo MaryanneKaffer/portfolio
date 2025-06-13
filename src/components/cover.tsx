@@ -32,7 +32,7 @@ export default function Cover() {
                     </span>
                 </a>
             </div>
-            <Links />
+            <Links/>
         </section>
     )
 }  

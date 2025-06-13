@@ -30,7 +30,7 @@ export default function Projects() {
         <section className="w-full h-[100dvh] justify-items-center sm:py-32 py-16 relative">
             <h1 className={`text-center sm:text-4xl text-2xl transition-all ${showStar ? "opacity-100" : "opacity-0"}`}>Projects</h1>
             <Swiper direction="vertical" slidesPerView={1} spaceBetween={window.innerWidth > 425 ? 10 : 55} modules={[Autoplay]} autoplay={isPlaying ? { delay: 1000 } : false} speed={1000}
-                className="w-full h-full" onSwiper={(swiper) => { swiperRef.current = swiper }} allowTouchMove={false}>
+                className="w-full h-full touch-pan-y" onSwiper={(swiper) => { swiperRef.current = swiper }} touchStartPreventDefault={false} allowTouchMove={false}>
                 {showStar && projects.map((project, index) => (
                     <SwiperSlide >
                         <motion.div className={`md:flex md:flex-row flex-col w-full h-full gap-[8vw] items-center justify-center transition-all`} key={index}
@@ -38,19 +38,25 @@ export default function Projects() {
                             <div onMouseEnter={() => setHover("preview")} onMouseLeave={() => setHover("")}
                                 className="dark:bg-[#111111] bg-white dark:border-none border-1 border-black xl:p-8 p-5 rounded-xl sm:h-[53%] sm:m-0 m-4 h-[40%] flex flex-col sm:w-[45vw] transition-all relative sm:ml-8 hover:scale-105 " >
                                 <a href={project.link} target="_blank">
-                                    <img src={project.image} alt={project.name} className="object-cover rounded-xl h-fit w-full" />
+                                    <img src={project.image} alt={project.name} className="object-cover rounded-xl md:h-fit md:w-full h-[95%] mx-auto" />
                                 </a>
-                                <a href={project.link} target="_blank" className="xl:text-xl self-center mt-auto bg-gradient-to-r dark:from-cyan-200 dark:via-white dark:to-pink-200 from-pink-300 to-yellow-300 bg-clip-text text-transparent">
-                                    Visit
+                                <a href={project.link} target="_blank" className="relative inline-block lg:text-lg text-[12px] rounded-xl p-[2px] transition-transform active:scale-100 group md:w-[50%] w-[40%] mx-auto mt-auto">
+                                    <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-300 to-yellow-200 dark:from-cyan-200 dark:via-white dark:to-pink-200 group-hover:drop-shadow-[0_0px_8px_rgba(255,192,203,0.5)]"></span>
+                                    <span className="relative z-10 flex items-center justify-center transition-all duration-500 hover:bg-transparent hover:dark:bg-transparent dark:bg-[#111111] bg-white text-black dark:text-white rounded-xl px-5 py-2 md:py-3">
+                                        <p className="group-hover:text-black">Visit</p>
+                                    </span>
                                 </a>
                                 {hover === "preview" && <StarHover type="card" />}
                             </div>
                             <div onMouseEnter={() => setHover("description")} onMouseLeave={() => setHover("")}
                                 className="dark:bg-[#111111] bg-white dark:border-none mt-14 sm:mt-0 border-1 border-black flex flex-col xl:p-8 p-5 rounded-xl sm:h-[53%] h-[45%] sm:w-[45vw] sm:m-0 m-4  relative sm:mr-8 hover:scale-105 transition-all" >
                                 <h2 className="text-center lgxl:text-3xl xl:text-2xl lg:text-xl md:text-md text-[20px] xl:mb-3 lg:mb-2 mb-1">{project.name}</h2>
-                                <p className="text-center lgxl:text-xl xl:text-lg lg:text-sm md:text-sm text-[1.7vh]">{project.description}</p>
-                                <a href={project.github} target="_blank" className="xl:text-xl mt-auto self-center bg-gradient-to-r dark:from-cyan-200 dark:via-white dark:to-pink-200 from-pink-300 to-yellow-300 bg-clip-text text-transparent">
-                                    GitHub
+                                <p className="text-center xl:text-lg lg:text-sm md:text-sm text-[1.7vh]">{project.description}</p>
+                                <a href={project.github} target="_blank" className="relative inline-block md:text-lg text-[12px] rounded-xl p-[2px] transition-transform active:scale-100 group md:w-[50%] w-[40%] mx-auto mt-auto">
+                                    <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-300 to-yellow-200 dark:from-cyan-200 dark:via-white dark:to-pink-200 group-hover:drop-shadow-[0_0px_8px_rgba(255,192,203,0.5)]"></span>
+                                    <span className="relative z-10 flex items-center justify-center transition-all duration-500 hover:bg-transparent hover:dark:bg-transparent dark:bg-[#111111] bg-white text-black dark:text-white rounded-xl px-5 py-2 md:py-3">
+                                        <p className="dark:group-hover:text-black">GitHub</p>
+                                    </span>
                                 </a>
                                 {hover === "description" && <StarHover type="card" />}
                             </div>
