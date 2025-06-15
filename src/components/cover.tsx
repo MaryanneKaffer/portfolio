@@ -1,9 +1,11 @@
 import Links from "./links";
 import StarHover from "./starHover";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 
 export default function Cover() {
     const [hover, setHover] = useState<number | null>(null);
+    const Resume = lazy(() => import("./resume"));
+
     return (
         <section className="w-full sm:h-[100dvh] justify-items-center lg:py-60 py-20">
             <div className="flex flex-col items-center">
@@ -18,9 +20,9 @@ export default function Cover() {
                 </span>
             </div>
             <div className="text-center lgxl:mt-10 my-8 lg:text-xl text-sm md:w-[75%]">
-                <p>I have been involved with programming since childhood and am always looking to learn and grow.
-                    In recent months, I have been focusing my studies on front-end development, using technologies such as React and JavaScript to build modern and high-performance web applications.
-                </p>
+                <Suspense fallback={<p className="text-gray-500">Loading</p>}>
+                    <Resume />
+                </Suspense>
             </div>
             <div className="lg:my-10 my-5 dark:hover:brightness-125 hover:scale-105 transition-all">
                 <a href="/assets/curriculum.pdf" target="_blank" onMouseEnter={() => setHover(10)} onMouseLeave={() => setHover(null)}
@@ -32,7 +34,7 @@ export default function Cover() {
                     </span>
                 </a>
             </div>
-            <Links/>
+            <Links />
         </section>
     )
 }  

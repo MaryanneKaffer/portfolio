@@ -38,7 +38,7 @@ export default function Projects() {
                             <div onMouseEnter={() => setHover("preview")} onMouseLeave={() => setHover("")}
                                 className="dark:bg-[#111111] bg-white dark:border-none border-1 border-black xl:p-8 p-5 rounded-xl sm:h-[53%] sm:m-0 m-4 h-[40%] flex flex-col sm:w-[45vw] transition-all relative sm:ml-8 hover:scale-105 " >
                                 <a href={project.link} target="_blank">
-                                    <img src={project.image} alt={project.name} className="object-cover rounded-xl md:h-fit md:w-full h-[95%] mx-auto" />
+                                    <img loading="lazy" src={project.image} alt={project.name} className="object-cover rounded-xl md:h-fit md:w-full h-[95%] mx-auto" />
                                 </a>
                                 <a href={project.link} target="_blank" className="relative inline-block lg:text-lg text-[12px] rounded-xl p-[2px] transition-transform active:scale-100 group md:w-[50%] w-[40%] mx-auto mt-auto">
                                     <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-300 to-yellow-200 dark:from-cyan-200 dark:via-white dark:to-pink-200 group-hover:drop-shadow-[0_0px_8px_rgba(255,192,203,0.5)]"></span>
@@ -82,7 +82,7 @@ export default function Projects() {
             >
                 <path d="M40 0 L70 0 Q50 -520 50 -500 Q50 -520 40 0 Z" />
             </motion.svg>}
-            <button onClick={toggleAutoplay} className={`transition-all p-3 duration-500 active:scale-50 w-fit h-fit z-10 ${showStar ? "opacity-100" : "opacity-0"}`}><FaChevronDown size={25} /></button>
+            <button onClick={toggleAutoplay} aria-label="Next" className={`transition-all p-3 duration-500 active:scale-50 w-fit h-fit z-10 ${showStar ? "opacity-100" : "opacity-0"}`}><FaChevronDown size={25} /></button>
         </section >
     )
 }
