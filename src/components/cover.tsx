@@ -14,8 +14,11 @@ export default function Cover() {
             lg:dark:drop-shadow-[0_0_5px_rgba(0,0,255,0.5)] dark:drop-shadow-[0_0_10px_rgba(0,0,255,0.7)] dark:brightness-125">
                     Maryanne Käffer
                 </h1>
-                <span className="cursor-default flex place-items-center gap-10 mr-[0.3vw] dark:text-purple-700 text-xl transition-all duration-500 hover:brightness-125 hover:drop-shadow-[0_0_10px_rgba(0,0,255,0.9)]">
+                <span className="cursor-default flex place-items-center gap-2 dark:text-purple-700 text-xl transition-all duration-500 hover:brightness-125 hover:drop-shadow-[0_0_10px_rgba(0,0,255,0.9)]">
                     <h2>Software</h2>
+                    <svg className="transition-all duration-500 animate-spin-slow size-4 dark:text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 0 C60 25, 75 40, 100 50 C75 60, 60 75, 50 100 C40 75, 25 60, 0 50 C25 40, 40 25, 50 0 Z" fill="currentColor" />
+                    </svg>
                     <h2>Engineer</h2>
                 </span>
             </div>

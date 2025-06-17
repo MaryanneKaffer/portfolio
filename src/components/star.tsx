@@ -27,7 +27,7 @@ export default function Star() {
 	return (
 		<motion.div
 			animate={{
-				y: active ? window.innerWidth > 1024 ? "275vh" : "285vh" : window.innerWidth > 1024 ? "21vh" : "16vh",
+				y: active ? window.innerWidth > 1024 ? "275vh" : "285vh" : 0
 			}}
 			transition={{
 				type: "spring",
@@ -36,7 +36,7 @@ export default function Star() {
 			}}
 		>
 			<svg
-				className={`${!active ? "animate-spin-slow" : "dark:text-white text-yellow-400"} ${!show ? "opacity-0" : "opacity-100"} transition-all h-[10vw] duration-500 size-[20px] fill-current dark:text-white absolute 
+				className={`${!active ? "hidden" : "dark:text-white text-yellow-400"} ${!show ? "opacity-0" : "opacity-100"} transition-all h-[10vw] duration-500 size-[20px] fill-current dark:text-white absolute 
 				lg:left-[49%] left-[47%] lgxl:mt-4 xl:mt-[9.5vh] lg:mt-[12.6vh] md:mt-2.5 mt-[11vh]`}
 				viewBox={active ? "0 -100 100 200" : "0 0 100 100"}
 				xmlns="http://www.w3.org/2000/svg"
