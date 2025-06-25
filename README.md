@@ -25,4 +25,4 @@ Feel free to reach out:
 
 * Email: [kaffermaryanne@gmail.com](mailto:kaffermaryanne@gmail.com)
 * LinkedIn: [https://www.linkedin.com/in/maryanne-käffer/](https://www.linkedin.com/in/maryanne-käffer/)
-* GitHub:[https://github.com/MaryanneKaffer](https://github.com/MaryanneKaffer)
+* GitHub: [https://github.com/MaryanneKaffer](https://github.com/MaryanneKaffer)
