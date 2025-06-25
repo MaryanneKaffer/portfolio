@@ -1,50 +1,28 @@
-# Vite & HeroUI Template
+# 💼 Personal Portfolio
 
-This is a template for creating applications using Vite and HeroUI (v2).
+Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a web developer. It was built to highlight my front-end development capabilities using modern tools and frameworks.
 
-[Try it on CodeSandbox](https://githubbox.com/frontio-ai/vite-template)
+👉 [View Portfolio](https://portfolio-delta-wheat-11.vercel.app)
 
-## Technologies Used
+## 🛠️ Built With
 
-- [Vite](https://vitejs.dev/guide/)
-- [HeroUI](https://heroui.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
+* **React** – JavaScript library for building user interfaces
+* **Vite** – Fast frontend build tool
+* **Tailwind CSS** – Utility-first CSS framework for styling
+* **Heroicons / React Icons** – For modern iconography
+* **Framer Motion** – For smooth animations
+  
+## 📁 Features
 
-## How to Use
+* Skills and education
+* Projects showcase with live demo and GitHub links
+* Fully responsive design
+* Dark/light mode toggle 
+  
+## 📫 Contact
 
-To clone the project, run the following command:
+Feel free to reach out:
 
-```bash
-git clone https://github.com/frontio-ai/vite-template.git
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/frontio-ai/vite-template/blob/main/LICENSE).
+* Email: [kaffermaryanne@gmail.com](mailto:kaffermaryanne@gmail.com)
+* LinkedIn: [https://www.linkedin.com/in/maryanne-käffer/](https://www.linkedin.com/in/maryanne-käffer/)
+* GitHub:[https://github.com/MaryanneKaffer](https://github.com/MaryanneKaffer)
