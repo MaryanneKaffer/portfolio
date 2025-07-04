@@ -86,7 +86,6 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
             )}
           />
         </div>
-
       </div>
     </Component>
   );

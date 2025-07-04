@@ -31,12 +31,12 @@ export default function Academic() {
                 <div className={`h-[3px] -ml-6 lg:-mt-[19px] -mt-[14px] rounded-r-xl bg-gradient-to-r from-black/100 to-black/0 dark:from-white/100 dark:to-white/0 bg-black ${active ? "w-[30%]" : "w-0"} transition-all duration-1000`} />
                 <div className={`w-[3px] lg:-ml-[23px] -ml-[32px] rounded-b-xl bg-gradient-to-b from-black/100 to-black/0 dark:from-white/100 dark:to-white/0 bg-black ${active ? "h-[60%]" : "h-0"} transition-all duration-1000`} />
             </motion.div>
-            <div className={`${active ? "opacity-100" : "opacity-0"} transition-all duration-1000`}>
+            <div className={`${active ? "opacity-100" : "opacity-0"} transition-all duration-1000 py-2 px-6`}>
                 <h1 className="sm:text-4xl text-2xl lg:mb-10 mt-5 mb-3">Education</h1>
                 <div className="flex flex-col gap-10">
                     <span className="flex flex-col lg:gap-2">
                         <h2 className="sm:text-2xl text-lg font-bold">
-                            Software Engineering
+                            Software Engineering    
                         </h2>
                         <p className="sm:text-lg">
                             UNINTER
