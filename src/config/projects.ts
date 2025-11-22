@@ -7,13 +7,6 @@ export const projects = [
         github: "https://github.com/MaryanneKaffer/game-explorer-app",
     },
     {
-        name: "Cinthia Correia",
-        description: "A website for a psychologist focused on mental health and well-being. It features a responsive design for optimal appearance on any device, complemented by subtle animations to enhance the user experience.",
-        image: "/assets/cinthiacorreia.png",
-        link: "https://site-psicologa-cinthia.vercel.app",
-        github: "https://github.com/MaryanneKaffer/site-psicologa-cinthia",
-    },
-    {
         name: "API Test",
         description: "A simple API test focused on learning how to build an API and integrate it into a bag ordering system project. (Not optimized for mobile devices)",
         image: "/assets/apiTest.png",

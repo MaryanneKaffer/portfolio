@@ -66,7 +66,7 @@ export default function Projects() {
             </Swiper>
             {showStar &&
                 <motion.svg initial={{ opacity: 0 }} animate={{ opacity: isPlaying ? 0 : 1 }} transition={{ duration: 0.1 }}
-                    className={`animate-spin-slow absolute sm:ml-2 ml-4 sm:top-[52%] top-[52%] z-10 transition-all duration-500 sm:size-[30px] size-[20px] fill-current dark:text-white text-yellow-400 hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.7)]`}
+                    className={`animate-spin-slow absolute flex sm:mx-0 mx-auto sm:top-[52%] top-[52%] z-10 transition-all duration-500 sm:size-[30px] size-[20px] fill-current dark:text-white text-yellow-400 hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.7)]`}
                     viewBox={"0 0 100 100"} xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 0 C60 25, 75 40, 100 50 C75 60, 60 75, 50 100 C40 75, 25 60, 0 50 C25 40, 40 25, 50 0 Z" />
                 </motion.svg>
@@ -82,7 +82,7 @@ export default function Projects() {
             >
                 <path d="M40 0 L70 0 Q50 -520 50 -500 Q50 -520 40 0 Z" />
             </motion.svg>}
-            <button onClick={toggleAutoplay} aria-label="Next" className={`transition-all p-3 duration-500 active:scale-50 w-fit h-fit z-10 ${showStar ? "opacity-100" : "opacity-0"}`}><FaChevronDown size={25} /></button>
+            <button onClick={toggleAutoplay} aria-label="Next" className={`flex transition-all p-3 duration-500 active:scale-50 w-fit h-fit z-10 sm:mx-0 mx-auto ${showStar ? "opacity-100" : "opacity-0"}`}><FaChevronDown size={25} /></button>
         </section >
     )
 }
